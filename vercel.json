@@ -9,19 +9,12 @@
       "src": "apps/frontend/package.json",
       "use": "@vercel/static-build",
       "config": {
-        "outputDirectory": "dist/portfolio-frontend"
-      },
-      "workPath": "apps/frontend"
+        "distDir": "dist/portfolio-frontend"
+      }
     }
   ],
-  "routes": [
-    {
-      "src": "/api/(.*)",
-      "dest": "apps/api/src/main.ts"
-    },
-    {
-      "src": "/(.*)",
-      "dest": "/index.html"
-    }
+  "rewrites": [
+    { "source": "/api/(.*)", "destination": "/apps/api/src/main.ts" },
+    { "source": "/(.*)", "destination": "/index.html" }
   ]
 }
