@@ -8,9 +8,7 @@
     {
       "src": "apps/frontend/package.json",
       "use": "@vercel/static-build",
-      "options": {
-        "distDir": "dist/portfolio-frontend"
-      }
+      "workPath": "apps/frontend"
     }
   ],
   "rewrites": [
