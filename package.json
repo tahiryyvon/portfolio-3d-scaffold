@@ -5,7 +5,9 @@
   "scripts": {
     "start:api": "cd apps/api && npm run start:dev",
     "start:frontend": "cd apps/frontend && npx ng serve",
-    "start:all": "concurrently \"npm run start:api\" \"npm run start:frontend\""
+    "start:all": "concurrently \"npm run start:api\" \"npm run start:frontend\"",
+    "build": "npm run build --prefix apps/api && npm run build --prefix apps/frontend",
+    "postinstall": "npm install --prefix apps/api && npm install --prefix apps/frontend"
   },
   "devDependencies": {
     "concurrently": "^7.0.0"
