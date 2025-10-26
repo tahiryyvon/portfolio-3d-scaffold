@@ -7,10 +7,7 @@
     },
     {
       "src": "apps/frontend/package.json",
-      "use": "@vercel/angular",
-      "options": {
-        "outputPath": "apps/frontend/dist/portfolio-frontend"
-      }
+      "use": "@vercel/angular"
     }
   ],
   "rewrites": [
