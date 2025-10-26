@@ -1,0 +1,31 @@
+<div class="app-root layout">
+  <aside class="sidebar">
+    <h2>Projects</h2>
+    <form class="add-form" (ngSubmit)="add()" #f="ngForm">
+      <input name="title" [(ngModel)]="newItem.title" placeholder="Title" required />
+      <input name="description" [(ngModel)]="newItem.description" placeholder="Description" />
+      <input name="imageUrl" [(ngModel)]="newItem.imageUrl" placeholder="Image URL" />
+      <input name="projectUrl" [(ngModel)]="newItem.projectUrl" placeholder="Project URL" />
+      <button type="submit" [disabled]="!newItem.title">Add</button>
+    </form>
+    <div class="cards">
+      <div class="card" *ngFor="let item of items" (click)="open(item)">
+        <div class="thumb">
+          <img *ngIf="item.imageUrl" [src]="item.imageUrl" alt="{{item.title}}" />
+          <div *ngIf="!item.imageUrl" class="placeholder">{{item.title.charAt(0)}}</div>
+        </div>
+        <div class="meta">
+          <h3>{{item.title}}</h3>
+          <p>{{item.description}}</p>
+        </div>
+      </div>
+    </div>
+  </aside>
+
+  <section class="scene-area">
+    <header>
+      <h1>My 3D Portfolio</h1>
+    </header>
+    <app-scene [items]="items"></app-scene>
+  </section>
+</div>

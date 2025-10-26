@@ -1,0 +1,5 @@
+# docker-compose removed — this project is configured to use an online Neon
+# Postgres database by default. The docker-compose file was intentionally
+# removed to avoid confusion. If you need a local Postgres, recreate a
+# docker-compose.yml with your preferred configuration.
+

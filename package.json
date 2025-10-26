@@ -1,0 +1,13 @@
+{
+  "name": "portfolio-3d-scaffold",
+  "version": "0.1.0",
+  "private": true,
+  "scripts": {
+    "start:api": "cd apps/api && npm run start:dev",
+    "start:frontend": "cd apps/frontend && npx ng serve",
+    "start:all": "concurrently \"npm run start:api\" \"npm run start:frontend\""
+  },
+  "devDependencies": {
+    "concurrently": "^7.0.0"
+  }
+}
