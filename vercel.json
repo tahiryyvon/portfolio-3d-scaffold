@@ -7,11 +7,14 @@
     },
     {
       "src": "apps/frontend/package.json",
-      "use": "@vercel/angular"
+      "use": "@vercel/static-build",
+      "options": {
+        "distDir": "dist/portfolio-frontend"
+      }
     }
   ],
   "rewrites": [
     { "source": "/api/(.*)", "destination": "/apps/api/src/main.ts" },
-    { "source": "/(.*)", "destination": "/apps/frontend" }
+    { "source": "/(.*)", "destination": "/index.html" }
   ]
 }
