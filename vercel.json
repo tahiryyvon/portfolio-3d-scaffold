@@ -9,8 +9,9 @@
       "src": "apps/frontend/package.json",
       "use": "@vercel/static-build",
       "config": {
-        "distDir": "/dist/portfolio-frontend/"
-      }
+        "outputDirectory": "dist/portfolio-frontend"
+      },
+      "workPath": "apps/frontend"
     }
   ],
   "routes": [
@@ -20,7 +21,7 @@
     },
     {
       "src": "/(.*)",
-      "dest": "apps/frontend/dist/portfolio-frontend/index.html"
+      "dest": "/index.html"
     }
   ]
 }
